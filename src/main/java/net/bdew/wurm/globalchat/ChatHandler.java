@@ -86,6 +86,7 @@ public class ChatHandler {
         systemMessage(player, CustomChannel.HELP, helpMsg);
         systemMessage(player, CustomChannel.INFO, infoMsg);
         systemMessage(player, CustomChannel.INFO, infoMsg2);
+        systemMessage(player, CustomChannel.RECRUITING, recruitmentMsg);
 
 
         if (eventsMsg.length() > 0)
