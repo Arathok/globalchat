@@ -11,8 +11,14 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ChatHandler {
+    public static String infoMsg="";
+    public static String infoMsg2="";
+    public static String recruitmentMsg="";
+    public static String globalMsg="";
+    public static String helpMsg="";
     static Logger chatlogger = Logger.getLogger("Chat");
     static String eventsMsg = "";
+
 
     public static void handleGlobalMessage(CustomChannel channel, Communicator communicator, String message) {
         if (communicator.isInvulnerable()) {
@@ -76,12 +82,11 @@ public class ChatHandler {
     }
 
     public static void sendBanner(final Player player) {
-        systemMessage(player, CustomChannel.GLOBAL, "Welcome to Otherlands Cluster. This is the Global channel, you can use it to communicate with players across all servers and kingdoms.");
-        systemMessage(player, CustomChannel.HELP, "This is the Help channel, if you have any questions about the game ask them here and we'll do our best to answer them.");
-        systemMessage(player, CustomChannel.HELP, "Please refrain from general chatter in this channel.");
-        systemMessage(player, CustomChannel.INFO, "Welcome to Otherlands PVE Cluster!");
-        systemMessage(player, CustomChannel.INFO, "Check out our website for all info on the servers and maps: https://otherlands.bdew.net/");
-        systemMessage(player, CustomChannel.INFO, "Join us in discord - https://discord.gg/58wmTbv");
+        systemMessage(player, CustomChannel.GLOBAL, globalMsg);
+        systemMessage(player, CustomChannel.HELP, helpMsg);
+        systemMessage(player, CustomChannel.INFO, infoMsg);
+        systemMessage(player, CustomChannel.INFO, infoMsg2);
+
 
         if (eventsMsg.length() > 0)
             systemMessage(player, CustomChannel.INFO, eventsMsg, 255, 140, 0);

@@ -39,6 +39,11 @@ public class GlobalChatMod implements WurmServerMod, Configurable, PreInitable, 
         CustomChannel.GLOBAL.discordName = properties.getProperty("globalName");
         CustomChannel.HELP.discordName = properties.getProperty("helpName");
         CustomChannel.TICKETS.discordName = properties.getProperty("ticketName");
+        ChatHandler.infoMsg = properties.getProperty("infoMsg");
+        ChatHandler.infoMsg2 = properties.getProperty("infoMsg2");
+        ChatHandler.recruitmentMsg = properties.getProperty("recruitmentMsg");
+        ChatHandler.globalMsg = properties.getProperty("globalMsg");
+        ChatHandler.helpMsg= properties.getProperty("helpMsg");
     }
 
     @Override

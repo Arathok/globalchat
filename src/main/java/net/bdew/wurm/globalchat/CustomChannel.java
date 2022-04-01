@@ -2,6 +2,7 @@ package net.bdew.wurm.globalchat;
 
 public enum CustomChannel {
     GLOBAL("Global", (byte) -1, true, false),
+    RECRUITING("Recruiting", (byte) -1, true, false),
     HELP("Help", (byte) -2, true, false),
     INFO("Info", (byte) -3, false, false),
     TICKETS("*", (byte) -3, false, true);
