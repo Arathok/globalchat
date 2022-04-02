@@ -11,11 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ChatHandler {
-    public static String infoMsg="";
-    public static String infoMsg2="";
-    public static String recruitmentMsg="";
-    public static String globalMsg="";
-    public static String helpMsg="";
+
     static Logger chatlogger = Logger.getLogger("Chat");
     static String eventsMsg = "";
 
@@ -82,11 +78,10 @@ public class ChatHandler {
     }
 
     public static void sendBanner(final Player player) {
-        systemMessage(player, CustomChannel.GLOBAL, globalMsg);
-        systemMessage(player, CustomChannel.HELP, helpMsg);
-        systemMessage(player, CustomChannel.INFO, infoMsg);
-        systemMessage(player, CustomChannel.INFO, infoMsg2);
-        systemMessage(player, CustomChannel.RECRUITING, recruitmentMsg);
+        systemMessage(player, CustomChannel.GLOBAL, CustomChannel.GLOBAL.msg);
+        systemMessage(player, CustomChannel.HELP, CustomChannel.HELP.msg);
+        systemMessage(player, CustomChannel.INFO, CustomChannel.INFO.msg);
+        systemMessage(player, CustomChannel.RECRUITMENT, CustomChannel.RECRUITMENT.msg);
 
 
         if (eventsMsg.length() > 0)
